@@ -14,6 +14,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://officialrickster.github.io/">
     <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@segato_riccardo">
     <meta name="twitter:title" content="Riccardo Segato | System & Game Designer">
     <meta name="twitter:description" content="Portfolio of Riccardo Segato, System & Game Designer. Specialized in game mechanics, balancing, RPGs, and robust systems. Bridging vision with math.">
     <script type="application/ld+json">
@@ -51,7 +52,6 @@
     <link rel="preconnect" href="https://store.steampowered.com">
     <link rel="preconnect" href="https://itch.io">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://store.fastly.steamstatic.com/public/shared/css/motiva_sans.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -78,11 +78,11 @@
             <div class="subtitle">Game Designer</div>
         </header>
         <div class="social-links">
-            <a href="https://github.com/OfficialRickster" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-            <a href="https://www.linkedin.com/in/segato-riccardo/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-            <a href="https://steamcommunity.com/id/OfficialRickster/" target="_blank"><i class="fa-brands fa-steam"></i> Steam</a>
-            <a href="https://officialrickster.itch.io/" target="_blank"><i class="fa-brands fa-itch-io"></i> Itch.io</a>
-            <a href="https://www.paypal.com/paypalme/OfficialRikyTV" target="_blank"><i class="fa-brands fa-paypal"></i> PayPal</a>
+            <a href="https://github.com/OfficialRickster" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/segato-riccardo/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="https://steamcommunity.com/id/OfficialRickster/" target="_blank" aria-label="Steam"><i class="fa-brands fa-steam"></i> Steam</a>
+            <a href="https://officialrickster.itch.io/" target="_blank" aria-label="Itch.io"><i class="fa-brands fa-itch-io"></i> Itch.io</a>
+            <a href="https://www.paypal.com/paypalme/OfficialRikyTV" target="_blank" aria-label="PayPal"><i class="fa-brands fa-paypal"></i> PayPal</a>
         </div>
         <main>
             <section id="about">
@@ -92,7 +92,17 @@
                 </div>
             </section>
             <section id="projects">
-                <h2>Featured Projects</h2>
+                <div class="projects-header reveal">
+                    <h2>Featured Projects</h2>
+                    <button class="mobile-filter-toggle"><i class="fa-solid fa-filter"></i> Filters</button>
+                    <div class="project-filters">
+                        <div class="filter-active-bg"></div>
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="Unreal">Unreal</button>
+                        <button class="filter-btn" data-filter="Unity">Unity</button>
+                        <button class="filter-btn" data-filter="RPG Maker">RPG Maker</button>
+                    </div>
+                </div>
                 <div class="projects-grid">
                     <div class="project-card reveal">
                         <div class="project-content">
@@ -100,21 +110,25 @@
                                 <div class="project-title">Death Rose</div>
                             </div>
                             <div class="project-tags">
-                                <span class="genre-tag">Multiplayer Co-op</span>
+                                <span class="genre-tag">Multiplayer co-op</span>
                                 <span class="genre-tag">Dungeon Crawler</span>
                                 <span class="genre-tag">Rogue-Like</span>
                             </div>
                             <div class="project-roles">
-                                <span class="engine-tag"><i class="fa-brands fa-unity"></i> Unity 6</span>
-                                <span class="role-tag">System Design</span>
-                                <span class="role-tag">Balancing</span>
-                                <span class="role-tag">Testing</span>
-                                <span class="role-tag">QA</span>
+                                <span class="engine-tag">Unity 6</span>
+                                <div class="role-tags-wrapper">
+                                    <span class="role-tag">System Design</span>
+                                    <span class="role-tag">Balancing</span>
+                                    <span class="role-tag">Testing</span>
+                                    <span class="role-tag">QA</span>
+                                </div>
                             </div>
                             <p>A cooperative experience featuring deep build customization with countless combinations of items, passives, and playstyles. <br>Working alongside a dedicated team, I architect the core systems and maintain balance.</p>
                         </div>
                         <div class="project-embed">
-                            <iframe src="https://store.steampowered.com/widget/3953940/" frameborder="0" width="100%" height="190" style="max-width: 650px;"></iframe>
+                            <div class="scale-wrapper steam-wrapper">
+                                <object title="Steam Store Widget for Death Rose" type="text/html" data-src="https://store.steampowered.com/widget/3953940/?l=english" class="scaled-object steam-object lazy-object"></object>
+                            </div>
                         </div>
                     </div>
                     <div class="project-card reveal">
@@ -128,28 +142,34 @@
                                 <span class="genre-tag">ATB Combat</span>
                             </div>
                             <div class="project-roles">
-                                <span class="engine-tag"><i class="fa-solid fa-gamepad"></i> RPG Maker VX Ace</span>
-                                <span class="role-tag">Solo Developer</span>
+                                <span class="engine-tag">RPG Maker VX Ace</span>
+                                <div class="role-tags-wrapper">
+                                    <span class="role-tag">Solo Developer</span>
+                                </div>
                             </div>
-                            <p>Initially born as a school project and expanded out of personal passion. You play as Viktor, a monster hunter who obtains a seemingly cursed power. This solo project demonstrates my capacity to autonomously manage a game's entire pipeline.</p>
+                            <p>Initially born as a school project and expanded out of personal passion. You play as Viktor, a monster hunter who obtains a seemingly cursed power.<br>This solo project demonstrates my capacity to autonomously manage a game's entire pipeline.</p>
                         </div>
                         <div class="project-embed">
-                            <iframe frameborder="0" src="https://itch.io/embed/3691266?linkback=true&amp;border_width=0&amp;bg_color=2a313c&amp;fg_color=eeeeee&amp;link_color=528b2d&amp;border_color=363636" width="100%" height="167" style="max-width: 650px;"><a href="https://officialrickster.itch.io/project-v">Project V by Rick</a></iframe>
+                            <div class="scale-wrapper itch-wrapper">
+                                <object title="Itch.io Store Widget for Project V" type="text/html" data-src="https://itch.io/embed/3691266?linkback=true&amp;border_width=0&amp;bg_color=2a313c&amp;fg_color=eeeeee&amp;link_color=528b2d&amp;border_color=363636" class="scaled-object itch-object lazy-object">
+                                    <a href="https://officialrickster.itch.io/project-v">Project V by Rick</a>
+                                </object>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section id="skills">
                 <h2>My Build</h2>
-                <div class="skills-layout">
-                    <div class="skill-group reveal radar-group">
+                <div class="skills-layout reveal">
+                    <div class="skill-group radar-group">
                         <h3>Design & Production Skills</h3>
                         <div class="radar-canvas-container">
                             <canvas id="designRadar"></canvas>
                         </div>
                     </div>
                     <div class="skills-right-col">
-                        <div class="skill-group reveal">
+                        <div class="skill-group">
                             <h3>Engines Knowledge</h3>
                             <div class="skill-list">
                                 <div class="skill-bar-container">
@@ -170,7 +190,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="skill-group reveal">
+                        <div class="skill-group">
                             <h3>Programming Knowledge</h3>
                             <div class="skill-list">
                                 <div class="skill-bar-container">
@@ -230,15 +250,21 @@
             <section id="contact" class="reveal">
                 <h2>Get in Touch</h2>
                 <p style="margin-bottom: 2rem;">Are you looking for a System Designer to architect and balance your next project?<br>Let's talk.</p>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=richi.segato@gmail.com" target="_blank" class="btn-primary">
-                    <i class="fa-solid fa-envelope"></i> Send an Email
-                </a>
+                <div class="contact-buttons" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=richi.segato@gmail.com" target="_blank" class="btn-primary">
+                        <i class="fa-solid fa-envelope"></i> Send an Email
+                    </a>
+                    <button id="copyEmailBtn" class="btn-primary btn-download">
+                        <i class="fa-regular fa-copy"></i> Copy Address
+                    </button>
+                </div>
             </section>
         </main>
         <footer>
             <p>&copy; <span id="current-year"></span> Riccardo Segato.</p>
         </footer>
     </div>
+    <button id="scrollToTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
     <script defer src="script.js"></script>
 </body>
 </html>
