@@ -67,9 +67,18 @@ const layer1 = document.querySelector('.layer-1');
 const layer2 = document.querySelector('.layer-2');
 const layer3 = document.querySelector('.layer-3');
 
+let ticking = false;
 window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    if (layer1) layer1.style.backgroundPositionY = `${scrollY * 0.15}px`;
-    if (layer2) layer2.style.backgroundPositionY = `${scrollY * 0.3}px`;
-    if (layer3) layer3.style.backgroundPositionY = `${scrollY * 0.5}px`;
-});
+    if (window.innerWidth < 768) return; // Disable on mobile for performance
+
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            const scrollY = window.scrollY;
+            if (layer1) layer1.style.backgroundPositionY = `${scrollY * 0.15}px`;
+            if (layer2) layer2.style.backgroundPositionY = `${scrollY * 0.3}px`;
+            if (layer3) layer3.style.backgroundPositionY = `${scrollY * 0.5}px`;
+            ticking = false;
+        });
+        ticking = true;
+    }
+}, { passive: true });
