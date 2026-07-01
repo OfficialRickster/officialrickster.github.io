@@ -346,6 +346,7 @@ p {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 5;
+    line-clamp: 5;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
 }
@@ -657,29 +658,6 @@ footer {
 .layer-3 {
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 3px, transparent 3px);
     background-size: 400px 400px;
-}
-.custom-cursor {
-    position: fixed;
-    top: 0; left: 0;
-    width: 20px; height: 20px;
-    border: 2px solid var(--accent-main);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s, background-color 0.2s;
-    mix-blend-mode: screen;
-    display: none;
-}
-@media (pointer: fine) {
-    body { cursor: none; }
-    .custom-cursor { display: block; }
-    a, button, .project-card, .btn-primary { cursor: none !important; }
-}
-.custom-cursor.hovering {
-    width: 45px; height: 45px;
-    background-color: rgba(88, 166, 255, 0.15);
-    border-color: rgba(88, 166, 255, 0.5);
 }
 .genre-tag, .engine-tag, .role-tag {
     transition: all 0.2s ease;

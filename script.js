@@ -16,44 +16,7 @@ const revealObserver = new IntersectionObserver((entries) => {
     rootMargin: "0px 0px -30px 0px"
 });
 revealElements.forEach(el => revealObserver.observe(el));
-const cursor = document.querySelector('.custom-cursor');
-document.addEventListener('mousemove', (e) => {
-    if (cursor) {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    }
-});
-const interactables = document.querySelectorAll('a, button, .project-card, .btn-primary, .quest-desc');
-interactables.forEach(el => {
-    el.addEventListener('mouseenter', () => { if(cursor) cursor.classList.add('hovering'); });
-    el.addEventListener('mouseleave', () => { if(cursor) cursor.classList.remove('hovering'); });
-});
-let mouseX = 0;
-let mouseY = 0;
-document.addEventListener('mousemove', (e) => {
-    mouseX = (e.clientX - window.innerWidth / 2) * 0.05;
-    mouseY = (e.clientY - window.innerHeight / 2) * 0.05;
-});
-const layer1 = document.querySelector('.layer-1');
-const layer2 = document.querySelector('.layer-2');
-const layer3 = document.querySelector('.layer-3');
-window.addEventListener('scroll', updateBackgrounds);
-document.addEventListener('mousemove', updateBackgrounds);
-function updateBackgrounds() {
-    const scrollY = window.scrollY;
-    if (layer1) {
-        layer1.style.backgroundPositionX = `${-mouseX * 2}px`;
-        layer1.style.backgroundPositionY = `${scrollY * 0.15 - mouseY * 2}px`;
-    }
-    if (layer2) {
-        layer2.style.backgroundPositionX = `${-mouseX * 1}px`;
-        layer2.style.backgroundPositionY = `${scrollY * 0.3 - mouseY * 1}px`;
-    }
-    if (layer3) {
-        layer3.style.backgroundPositionX = `${-mouseX * 0.5}px`;
-        layer3.style.backgroundPositionY = `${scrollY * 0.5 - mouseY * 0.5}px`;
-    }
-}
+
 const commonRadarOptions = {
     layout: { padding: 0 },
     scales: {
@@ -100,3 +63,13 @@ createRadar('designRadar', [['System', 'Design'], ['Level', 'Design'], 'Balancin
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-GPJS0GCNQX');
+const layer1 = document.querySelector('.layer-1');
+const layer2 = document.querySelector('.layer-2');
+const layer3 = document.querySelector('.layer-3');
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    if (layer1) layer1.style.backgroundPositionY = `${scrollY * 0.15}px`;
+    if (layer2) layer2.style.backgroundPositionY = `${scrollY * 0.3}px`;
+    if (layer3) layer3.style.backgroundPositionY = `${scrollY * 0.5}px`;
+});
