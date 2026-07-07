@@ -1,3 +1,16 @@
+// Force Safari to recalculate :active states on touch, preventing stuck buttons
+document.addEventListener('touchstart', function() {}, {passive: true});
+
+// Robust button press animation handling using Pointer Events
+document.querySelectorAll('a, button').forEach(el => {
+    const addPressed = () => el.classList.add('pressed');
+    const removePressed = () => el.classList.remove('pressed');
+    el.addEventListener('pointerdown', addPressed, {passive: true});
+    el.addEventListener('pointerup', removePressed);
+    el.addEventListener('pointercancel', removePressed);
+    el.addEventListener('pointerleave', removePressed);
+});
+
 document.getElementById('current-year').textContent = new Date().getFullYear();
 const revealElements = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
@@ -59,7 +72,7 @@ const createRadar = (id, labels, data, color) => {
         options: commonRadarOptions
     });
 };
-createRadar('designRadar', [['System', 'Design'], ['Level', 'Design'], 'Balancing', ['QA &', 'Testing'], 'Narrative'], [90, 70, 85, 80, 35], 'rgba(163, 113, 247, 1)');
+createRadar('designRadar', [['System', 'Design'], ['Level', 'Design'], 'Balancing', ['QA &', 'Testing'], 'Narrative'], [90, 70, 85, 80, 35], 'rgba(88, 166, 255, 1)');
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -173,10 +186,21 @@ if (mobileFilterToggle && projectsHeader) {
         mobileFilterToggle.setAttribute('aria-expanded', projectsHeader.classList.contains('show-filters'));
         
         if (projectsHeader.classList.contains('show-filters')) {
-            setTimeout(() => {
-                const activeBtn = document.querySelector('.filter-btn.active');
-                if (activeBtn) updateFilterBg(activeBtn);
-            }, 50);
+            const activeBtn = document.querySelector('.filter-btn.active');
+            if (activeBtn && filterActiveBg) {
+                // Disable transition to prevent "flying" highlight
+                filterActiveBg.style.transition = 'none';
+                
+                // Continuously lock the highlight to the button during the accordion animation
+                const updateInterval = setInterval(() => updateFilterBg(activeBtn), 20);
+                
+                // Restore transition after the accordion finishes opening (400ms)
+                setTimeout(() => {
+                    clearInterval(updateInterval);
+                    updateFilterBg(activeBtn);
+                    filterActiveBg.style.transition = '';
+                }, 400);
+            }
         }
     });
 
@@ -235,12 +259,4 @@ if (copyEmailBtn) {
     });
 }
 
-// Dynamic Tab Title
-const originalTitle = document.title;
-document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-        document.title = 'Miss you! 🎮';
-    } else {
-        document.title = originalTitle;
-    }
-});
+
