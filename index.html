@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riccardo Segato | Portfolio & Projects | System & Game Designer</title>
     <meta name="description" content="Portfolio and projects of Riccardo Segato, System & Game Designer. Specialized in game mechanics, balancing, RPGs, and robust systems. Bridging vision with math.">
-    <meta name="keywords" content="Game Designer, System Designer, Level Design, Riccardo Segato, Game Developer, Portfolio, Unreal Engine, Unity, RPG, Immersive Sim, Balancing, Games, Demo, ArtLake, Death Rose, Project V">
+    <meta name="keywords" content="Game Designer, System Designer, Level Design, Riccardo Segato, Game Developer, Portfolio, Unreal Engine, Unity, RPG, Balancing, Games, Demo, ArtLake, Death Rose, Project V">
     <meta name="author" content="Riccardo Segato">
     <meta name="theme-color" content="#131920">
     <meta name="robots" content="index, follow">
@@ -21,28 +21,97 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Riccardo Segato",
-      "jobTitle": "Game Designer",
-      "url": "https://officialrickster.github.io/",
-      "email": "richi.segato@gmail.com",
-      "telephone": "+393341160538",
-      "sameAs": [
-        "https://github.com/OfficialRickster",
-        "https://www.linkedin.com/in/segato-riccardo/",
-        "https://steamcommunity.com/id/OfficialRickster/",
-        "https://officialrickster.itch.io/",
-        "https://open.spotify.com/user/6gh5ch8ua9278mzymevxpqsib",
-        "https://www.instagram.com/official.rickster/",
-        "https://www.facebook.com/official.rickster/",
-        "https://x.com/segato_riccardo",
-        "https://www.gog.com/u/Official.Rickster",
-        "https://store.epicgames.com/u/e42998a658664f479538f6eff602d3c8",
-        "https://www.youtube.com/@official.rickster",
-        "https://www.xbox.com/it-IT/play/user/RikyTV%20Official",
-        "https://www.twitch.tv/officialrickster",
-        "https://linktr.ee/official.rickster",
-        "https://dev.to/officialrickster"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://officialrickster.github.io/#website",
+          "url": "https://officialrickster.github.io/",
+          "name": "Riccardo Segato | Portfolio & Projects",
+          "description": "Portfolio and projects of Riccardo Segato, System & Game Designer.",
+          "publisher": { "@id": "https://officialrickster.github.io/#person" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://officialrickster.github.io/#person",
+          "name": "Riccardo Segato",
+          "givenName": "Riccardo",
+          "familyName": "Segato",
+          "nationality": {
+            "@type": "Country",
+            "name": "Italy"
+          },
+          "homeLocation": {
+            "@type": "Place",
+            "name": "Padua, Italy"
+          },
+          "alumniOf": [
+            { "@type": "EducationalOrganization", "name": "Event Horizon School" },
+            { "@type": "EducationalOrganization", "name": "iMasterArt" },
+            { "@type": "EducationalOrganization", "name": "I.I.S. Euganeo Este" }
+          ],
+          "jobTitle": [
+            "Game Designer",
+            "System Designer",
+            "Level Designer",
+            "Game Developer",
+            "QA Tester"
+          ],
+          "description": "System & Game Designer specialized in game mechanics, balancing, RPGs, and robust systems.",
+          "image": "https://officialrickster.github.io/my-favicon/apple-touch-icon.png",
+          "url": "https://officialrickster.github.io/",
+          "email": "richi.segato@gmail.com",
+          "telephone": "+393341160538",
+          "knowsAbout": [
+            "Game Design",
+            "System Design",
+            "Balancing",
+            "Game Mechanics",
+            "Unreal Engine",
+            "Unity",
+            "Game Engines",
+            "Game Development",
+            "QA Testing",
+            "Game Design Documentation",
+            "Prototyping",
+            "Game Testing",
+            "Level Design",
+            "Agile",
+            "Scrum",
+            "Playtesting",
+            "Game Jam"
+          ],
+          "sameAs": [
+            "https://github.com/OfficialRickster",
+            "https://www.linkedin.com/in/segato-riccardo/",
+            "https://steamcommunity.com/id/OfficialRickster/",
+            "https://officialrickster.itch.io/",
+            "https://open.spotify.com/user/6gh5ch8ua9278mzymevxpqsib",
+            "https://www.instagram.com/official.rickster/",
+            "https://www.facebook.com/official.rickster/",
+            "https://x.com/segato_riccardo",
+            "https://www.gog.com/u/Official.Rickster",
+            "https://store.epicgames.com/u/e42998a658664f479538f6eff602d3c8",
+            "https://www.youtube.com/@official.rickster",
+            "https://www.xbox.com/it-IT/play/user/RikyTV%20Official",
+            "https://www.twitch.tv/officialrickster",
+            "https://linktr.ee/official.rickster",
+            "https://dev.to/officialrickster"
+          ]
+        },
+        {
+          "@type": "VideoGame",
+          "name": "Death Rose",
+          "genre": ["Multiplayer co-op", "Dungeon Crawler", "Rogue-Like"],
+          "gamePlatform": "PC",
+          "author": { "@id": "https://officialrickster.github.io/#person" }
+        },
+        {
+          "@type": "VideoGame",
+          "name": "Project V",
+          "genre": ["Singleplayer", "JRPG", "ATB Combat"],
+          "gamePlatform": "PC",
+          "author": { "@id": "https://officialrickster.github.io/#person" }
+        }
       ]
     }
     </script>
@@ -60,7 +129,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPJS0GCNQX"></script>
     <link rel="icon" type="image/png" href="my-favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="my-favicon/favicon.svg" />
-    <link rel="shortcut icon" href="my-favicon/favicon.ico" />
+    <link rel="shortcut icon" href="favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="my-favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Riccardo Segato" />
     <link rel="manifest" href="my-favicon/site.webmanifest" />
@@ -135,7 +204,7 @@
                         </div>
                         <div class="project-embed">
                             <div class="scale-wrapper steam-wrapper">
-                                <object title="Steam Store Widget for Death Rose" type="text/html" data-src="https://store.steampowered.com/widget/3953940/?l=english" class="scaled-object steam-object lazy-object"></object>
+                                <object title="Steam Store Widget for Death Rose" type="text/html" data="https://store.steampowered.com/widget/3953940/?l=english" class="scaled-object steam-object"></object>
                             </div>
                         </div>
                     </div>
@@ -159,7 +228,7 @@
                         </div>
                         <div class="project-embed">
                             <div class="scale-wrapper itch-wrapper">
-                                <object title="Itch.io Store Widget for Project V" type="text/html" data-src="https://itch.io/embed/3691266?linkback=true&amp;border_width=0&amp;bg_color=2a313c&amp;fg_color=eeeeee&amp;link_color=528b2d&amp;border_color=363636" class="scaled-object itch-object lazy-object">
+                                <object title="Itch.io Store Widget for Project V" type="text/html" data="https://itch.io/embed/3691266?linkback=true&amp;border_width=0&amp;bg_color=2a313c&amp;fg_color=eeeeee&amp;link_color=528b2d&amp;border_color=363636" class="scaled-object itch-object">
                                     <a href="https://officialrickster.itch.io/project-v">Project V by Rick</a>
                                 </object>
                             </div>

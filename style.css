@@ -25,7 +25,6 @@ body {
     padding: 0;
     overflow-x: hidden;
 }
-
 a, button {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
@@ -345,18 +344,15 @@ p:last-child {
         justify-content: flex-start;
         gap: 0.5rem;
         border-radius: 12px;
-        box-sizing: border-box; /* ensure max-height includes padding */
-        
-        /* Hidden state for smooth accordion */
+        box-sizing: border-box;
         max-height: 0;
         opacity: 0;
-        margin-top: calc(-1rem - 2px); /* Negate padding+border height so it takes 0 space */
+        margin-top: calc(-1rem - 2px);
         margin-bottom: 0;
         border-color: transparent;
         box-shadow: none;
         overflow: hidden;
         visibility: hidden;
-        
         transition: max-height 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), 
                     opacity 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), 
                     margin-top 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), 
@@ -504,7 +500,6 @@ p:last-child {
 }
 .steam-wrapper { aspect-ratio: 650 / 190; }
 .itch-wrapper { aspect-ratio: 650 / 167; }
-
 .scaled-object {
     position: absolute;
     top: 0;
@@ -877,8 +872,6 @@ footer {
     transform: translateX(5px);
     box-shadow: var(--shadow-glow);
 }
-
-/* Sidebar Navigation */
 .sidebar-nav {
     position: fixed;
     top: 50%;
@@ -895,13 +888,11 @@ footer {
     overflow: hidden;
     box-shadow: 8px 0 24px rgba(0, 0, 0, 0.4);
 }
-
 .sidebar-nav:hover {
     width: 200px;
     box-shadow: 8px 0 32px rgba(88, 166, 255, 0.15);
     border-color: var(--border-focus);
 }
-
 .sidebar-nav ul {
     list-style: none;
     padding: 0;
@@ -910,7 +901,6 @@ footer {
     flex-direction: column;
     gap: 0.2rem;
 }
-
 .sidebar-nav a {
     position: relative;
     display: flex;
@@ -922,7 +912,6 @@ footer {
     transition: all 0.2s ease;
     white-space: nowrap;
 }
-
 .sidebar-nav a::before {
     content: '';
     position: absolute;
@@ -934,7 +923,6 @@ footer {
     transform: scaleY(0);
     transition: transform 0.2s ease;
 }
-
 .sidebar-nav a i {
     font-size: 1.2rem;
     width: 30px;
@@ -942,7 +930,6 @@ footer {
     flex-shrink: 0;
     transition: color 0.2s ease, transform 0.2s ease;
 }
-
 .sidebar-nav .nav-text {
     margin-left: 1rem;
     font-weight: 500;
@@ -950,30 +937,24 @@ footer {
     transform: translateX(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
 @media (hover: hover) {
     .sidebar-nav:hover .nav-text {
         opacity: 1;
         transform: translateX(0);
         transition-delay: 0.1s;
     }
-
     .sidebar-nav a:hover {
         color: var(--text-heading);
         background-color: rgba(255, 255, 255, 0.03);
     }
-
     .sidebar-nav a:hover::before {
         transform: scaleY(1);
     }
-
     .sidebar-nav a:hover i {
         color: var(--accent-main);
         transform: scale(1.1);
     }
 }
-
-/* Scroll to Top Button */
 #scrollToTopBtn {
     position: fixed;
     bottom: 30px;
@@ -1023,8 +1004,6 @@ footer {
         border-radius: 10px;
     }
 }
-
-/* Accessibility */
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
     outline: 2px solid var(--accent-main);
     outline-offset: 4px;

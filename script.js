@@ -1,7 +1,4 @@
-// Force Safari to recalculate :active states on touch, preventing stuck buttons
 document.addEventListener('touchstart', function() {}, {passive: true});
-
-// Robust button press animation handling using Pointer Events
 document.querySelectorAll('a, button').forEach(el => {
     const addPressed = () => el.classList.add('pressed');
     const removePressed = () => el.classList.remove('pressed');
@@ -10,7 +7,6 @@ document.querySelectorAll('a, button').forEach(el => {
     el.addEventListener('pointercancel', removePressed);
     el.addEventListener('pointerleave', removePressed);
 });
-
 document.getElementById('current-year').textContent = new Date().getFullYear();
 const revealElements = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
@@ -29,7 +25,6 @@ const revealObserver = new IntersectionObserver((entries) => {
     rootMargin: "0px"
 });
 revealElements.forEach(el => revealObserver.observe(el));
-
 const commonRadarOptions = {
     layout: { padding: 0 },
     scales: {
@@ -73,7 +68,6 @@ const createRadar = (id, labels, data, color) => {
     });
 };
 createRadar('designRadar', [['System', 'Design'], ['Level', 'Design'], 'Balancing', ['QA &', 'Testing'], 'Narrative'], [90, 70, 85, 80, 35], 'rgba(88, 166, 255, 1)');
-
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
@@ -81,12 +75,10 @@ gtag('config', 'G-GPJS0GCNQX');
 const layer1 = document.querySelector('.layer-1');
 const layer2 = document.querySelector('.layer-2');
 const layer3 = document.querySelector('.layer-3');
-
 let ticking = false;
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
 window.addEventListener('scroll', () => {
-    if (window.innerWidth < 768 || prefersReducedMotion.matches) return; // Disable on mobile or if reduced motion is preferred
+    if (window.innerWidth < 768 || prefersReducedMotion.matches) return;
 
     if (!ticking) {
         window.requestAnimationFrame(() => {
@@ -99,7 +91,6 @@ window.addEventListener('scroll', () => {
         ticking = true;
     }
 }, { passive: true });
-
 function scaleWidgets() {
     if (window.innerWidth > 768) {
         document.querySelectorAll('.scaled-object').forEach(el => el.style.transform = '');
@@ -116,12 +107,9 @@ function scaleWidgets() {
 window.addEventListener('resize', scaleWidgets);
 window.addEventListener('DOMContentLoaded', scaleWidgets);
 scaleWidgets();
-
-// Project Filtering
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
 const filterActiveBg = document.querySelector('.filter-active-bg');
-
 function updateFilterBg(btn) {
     if (!filterActiveBg || !btn) return;
     filterActiveBg.style.width = `${btn.offsetWidth}px`;
@@ -129,14 +117,12 @@ function updateFilterBg(btn) {
     filterActiveBg.style.left = `${btn.offsetLeft}px`;
     filterActiveBg.style.top = `${btn.offsetTop}px`;
 }
-
 const initialActiveBtn = document.querySelector('.filter-btn.active');
 if (initialActiveBtn) {
     updateFilterBg(initialActiveBtn);
     window.addEventListener('load', () => updateFilterBg(initialActiveBtn));
     window.addEventListener('resize', () => updateFilterBg(document.querySelector('.filter-btn.active')));
 }
-
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         filterBtns.forEach(b => {
@@ -146,13 +132,10 @@ filterBtns.forEach(btn => {
         btn.classList.add('active');
         btn.setAttribute('aria-pressed', 'true');
         updateFilterBg(btn);
-
         const filterValue = btn.getAttribute('data-filter');
-
         projectCards.forEach(card => {
             if (filterValue === 'all') {
                 card.style.display = 'flex';
-                // Small animation trigger
                 card.classList.remove('active');
                 setTimeout(() => card.classList.add('active'), 50);
             } else {
@@ -166,7 +149,6 @@ filterBtns.forEach(btn => {
                 }
             }
         });
-
         if (window.innerWidth <= 950) {
             const header = document.querySelector('.projects-header');
             const toggleBtn = document.querySelector('.mobile-filter-toggle');
@@ -175,26 +157,21 @@ filterBtns.forEach(btn => {
         }
     });
 });
-
 const mobileFilterToggle = document.querySelector('.mobile-filter-toggle');
 const projectsHeader = document.querySelector('.projects-header');
-
 if (mobileFilterToggle && projectsHeader) {
     mobileFilterToggle.addEventListener('click', () => {
         projectsHeader.classList.toggle('show-filters');
         mobileFilterToggle.classList.toggle('active');
         mobileFilterToggle.setAttribute('aria-expanded', projectsHeader.classList.contains('show-filters'));
-        
+
         if (projectsHeader.classList.contains('show-filters')) {
             const activeBtn = document.querySelector('.filter-btn.active');
             if (activeBtn && filterActiveBg) {
-                // Disable transition to prevent "flying" highlight
                 filterActiveBg.style.transition = 'none';
-                
-                // Continuously lock the highlight to the button during the accordion animation
+
                 const updateInterval = setInterval(() => updateFilterBg(activeBtn), 20);
-                
-                // Restore transition after the accordion finishes opening (400ms)
+
                 setTimeout(() => {
                     clearInterval(updateInterval);
                     updateFilterBg(activeBtn);
@@ -214,23 +191,6 @@ if (mobileFilterToggle && projectsHeader) {
         }
     });
 }
-
-// Lazy Load Objects
-const lazyObjects = document.querySelectorAll('.lazy-object');
-const objectObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const obj = entry.target;
-            obj.data = obj.getAttribute('data-src');
-            obj.classList.remove('lazy-object');
-            observer.unobserve(obj);
-        }
-    });
-}, { rootMargin: "750px 0px" });
-
-lazyObjects.forEach(obj => objectObserver.observe(obj));
-
-// Scroll to Top Button
 const scrollBtn = document.getElementById('scrollToTopBtn');
 if (scrollBtn) {
     window.addEventListener('scroll', () => {
@@ -244,8 +204,6 @@ if (scrollBtn) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
-
-// Copy Email Button
 const copyEmailBtn = document.getElementById('copyEmailBtn');
 if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', () => {
@@ -258,5 +216,3 @@ if (copyEmailBtn) {
         });
     });
 }
-
-
