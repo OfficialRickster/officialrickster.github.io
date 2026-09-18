@@ -307,6 +307,9 @@ p:last-child {
     .role-tags-wrapper {
         justify-content: center;
     }
+    .project-studio-banner {
+        justify-content: center;
+    }
     .projects-header {
         flex-direction: column;
         align-items: center;
@@ -468,6 +471,29 @@ p:last-child {
     align-items: center;
     white-space: nowrap;
 }
+.project-studio-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(45, 53, 64, 0.6);
+}
+.studio-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.studio-extended-logo {
+    height: 24px;
+    width: auto;
+    filter: brightness(0) invert(0.85);
+    opacity: 0.9;
+    pointer-events: none;
+    user-select: none;
+}
 .project-embed {
     background-color: var(--bg-tertiary);
     padding: 1rem;
@@ -626,6 +652,17 @@ footer {
     font-size: 0.9rem;
     border-top: 1px solid var(--border-light);
     margin-top: 4rem;
+}
+.footer-studio-logo {
+    height: 18px;
+    width: 18px;
+    vertical-align: -3px;
+    margin: 0 4px 0 6px;
+    filter: brightness(0) invert(0.85);
+    opacity: 0.85;
+    display: inline-block;
+    pointer-events: none;
+    user-select: none;
 }
 @media (max-width: 768px) {
     .sidebar-nav {
