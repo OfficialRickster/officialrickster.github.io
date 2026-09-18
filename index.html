@@ -28,7 +28,19 @@
           "url": "https://officialrickster.github.io/",
           "name": "Riccardo Segato | Portfolio & Projects",
           "description": "Portfolio and projects of Riccardo Segato, System & Game Designer.",
-          "publisher": { "@id": "https://officialrickster.github.io/#person" }
+          "publisher": { "@id": "https://officialrickster.github.io/#person" },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://officialrickster.github.io/#profilepage",
+          "url": "https://officialrickster.github.io/",
+          "name": "Riccardo Segato | Portfolio & Projects | System & Game Designer",
+          "isPartOf": { "@id": "https://officialrickster.github.io/#website" },
+          "about": { "@id": "https://officialrickster.github.io/#person" },
+          "mainEntity": { "@id": "https://officialrickster.github.io/#person" },
+          "dateModified": "2026-09-18",
+          "inLanguage": "en"
         },
         {
           "@type": "Person",
@@ -44,10 +56,33 @@
             "@type": "Place",
             "name": "Padua, Italy"
           },
+          "knowsLanguage": [
+            {
+              "@type": "Language",
+              "name": "Italian",
+              "alternateName": "it"
+            },
+            {
+              "@type": "Language",
+              "name": "English",
+              "alternateName": "en"
+            }
+          ],
           "alumniOf": [
-            { "@type": "EducationalOrganization", "name": "Event Horizon School" },
-            { "@type": "EducationalOrganization", "name": "iMasterArt" },
-            { "@type": "EducationalOrganization", "name": "I.I.S. Euganeo Este" }
+            {
+              "@type": "EducationalOrganization",
+              "name": "Event Horizon School",
+              "url": "https://eventhorizon-school.com/"
+            },
+            {
+              "@type": "EducationalOrganization",
+              "name": "iMasterArt",
+              "url": "https://imasterart.academy/"
+            },
+            {
+              "@type": "EducationalOrganization",
+              "name": "I.I.S. Euganeo Este"
+            }
           ],
           "jobTitle": [
             "Game Designer",
@@ -56,18 +91,40 @@
             "Game Developer",
             "QA Tester"
           ],
+          "hasOccupation": [
+            {
+              "@type": "Occupation",
+              "name": "System Designer",
+              "occupationalCategory": "15-1255.00",
+              "skills": "Mathematical Balancing, System Architecture, Economy Design, Progression Curves, Data Tables"
+            },
+            {
+              "@type": "Occupation",
+              "name": "Game Designer",
+              "occupationalCategory": "15-1255.00",
+              "skills": "Game Mechanics, Combat Design, GDD, Prototyping, Unreal Engine, Unity, Level Design"
+            }
+          ],
           "description": "System & Game Designer specialized in game mechanics, balancing, RPGs, and robust systems.",
           "image": "https://officialrickster.github.io/my-favicon/apple-touch-icon.png",
           "url": "https://officialrickster.github.io/",
-          "email": "richi.segato@gmail.com",
+          "email": "mailto:richi.segato@gmail.com",
           "telephone": "+393341160538",
           "knowsAbout": [
             "Game Design",
             "System Design",
             "Balancing",
             "Game Mechanics",
+            "Economy Balancing",
+            "Combat Systems",
+            "Progression Curves",
             "Unreal Engine",
+            "Unreal Engine 5",
+            "Blueprints",
             "Unity",
+            "Unity 6",
+            "C#",
+            "RPG Maker",
             "Game Engines",
             "Game Development",
             "QA Testing",
@@ -78,7 +135,10 @@
             "Agile",
             "Scrum",
             "Playtesting",
-            "Game Jam"
+            "Game Jam",
+            "Data-Driven Design",
+            "JRPG",
+            "Rogue-Like Design"
           ],
           "sameAs": [
             "https://github.com/OfficialRickster",
@@ -95,21 +155,37 @@
             "https://www.xbox.com/it-IT/play/user/RikyTV%20Official",
             "https://www.twitch.tv/officialrickster",
             "https://linktr.ee/official.rickster",
-            "https://dev.to/officialrickster"
-          ]
+            "https://dev.to/officialrickster",
+            "https://store.steampowered.com/app/3953940/Death_Rose/",
+            "https://officialrickster.itch.io/project-v"
+            ]
         },
         {
           "@type": "VideoGame",
+          "@id": "https://officialrickster.github.io/#game-death-rose",
           "name": "Death Rose",
-          "genre": ["Multiplayer co-op", "Dungeon Crawler", "Rogue-Like"],
-          "gamePlatform": "PC",
+          "url": "https://store.steampowered.com/app/3953940/Death_Rose/",
+          "sameAs": "https://store.steampowered.com/app/3953940/Death_Rose/",
+          "description": "A cooperative dungeon crawler experience featuring deep build customization with countless combinations of items, passives, and playstyles.",
+          "genre": ["Multiplayer co-op", "Dungeon Crawler", "Rogue-Like", "Action RPG"],
+          "gamePlatform": ["PC", "Windows"],
+          "applicationCategory": "Game",
+          "operatingSystem": "Windows",
+          "playMode": "CoOp",
           "author": { "@id": "https://officialrickster.github.io/#person" }
         },
         {
           "@type": "VideoGame",
+          "@id": "https://officialrickster.github.io/#game-project-v",
           "name": "Project V",
-          "genre": ["Singleplayer", "JRPG", "ATB Combat"],
-          "gamePlatform": "PC",
+          "url": "https://officialrickster.itch.io/project-v",
+          "sameAs": "https://officialrickster.itch.io/project-v",
+          "description": "A classic singleplayer JRPG featuring ATB combat where you play as Viktor, a monster hunter who obtains a cursed power.",
+          "genre": ["Singleplayer", "JRPG", "ATB Combat", "Fantasy"],
+          "gamePlatform": ["PC", "Windows"],
+          "applicationCategory": "Game",
+          "operatingSystem": "Windows",
+          "playMode": "SinglePlayer",
           "author": { "@id": "https://officialrickster.github.io/#person" }
         }
       ]
