@@ -268,7 +268,7 @@
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="style.css?v=1.4">
+    <link rel="stylesheet" href="style.css?v=1.6">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPJS0GCNQX"></script>
     <link rel="icon" type="image/png" href="my-favicon/favicon-96x96.png" sizes="96x96" />
@@ -308,14 +308,29 @@
         <main>
             <section id="about">
                 <h2>About Me & My Work</h2>
-                <div class="about-text reveal">
-                    I'm a System Designer focused on core mechanics, mathematical balancing, and scalable progression systems.
+                <div class="about-card reveal">
+                    <div class="about-photo-wrapper">
+                        <img src="Assets/profile.jpg" alt="Riccardo Segato - Game & System Designer" class="about-photo" onerror="this.classList.add('is-missing');">
+                        <div class="about-photo-placeholder">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Photo</span>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p class="about-lead">I am a <strong>System Designer</strong>, focused on turning mechanics into balanced, scalable game systems.</p>
+                        <ul class="about-workflow">
+                            <li><i class="fa-solid fa-diagram-project"></i> <span><strong>Logic & Architecture:</strong> Collaborating with programmers to define gameplay logic or authoring from scratch.</span></li>
+                            <li><i class="fa-solid fa-table-cells"></i> <span><strong>Data Modeling:</strong> Structuring formulas and balance tables in spreadsheets to simulate and predict system behaviors.</span></li>
+                            <li><i class="fa-solid fa-sliders"></i> <span><strong>Iterative Tuning:</strong> In-engine testing and adjusting values until mechanics feel satisfying and reward player mastery.</span></li>
+                            <li><i class="fa-solid fa-list-check"></i> <span><strong>QA & Diagnostics:</strong> Stress-testing edge cases and reporting defects early to keep systems rock-solid.</span></li>
+                        </ul>
+                    </div>
                 </div>
             </section>
             <section id="projects">
                 <div class="projects-header reveal">
                     <h2>Featured Projects</h2>
-                    <button class="mobile-filter-toggle"><i class="fa-solid fa-filter"></i> Filters</button>
+                    <button class="mobile-filter-toggle"><i class="fa-solid fa-filter"></i>Filters</button>
                     <div class="project-filters">
                         <div class="filter-active-bg"></div>
                         <button class="filter-btn active" data-filter="all">All</button>
