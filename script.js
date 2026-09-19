@@ -7,7 +7,7 @@ document.querySelectorAll('a, button').forEach(el => {
     el.addEventListener('pointercancel', removePressed);
     el.addEventListener('pointerleave', removePressed);
 });
-document.querySelectorAll('.about-card, .project-card, .skill-group, .education-item, .quest-desc').forEach(card => {
+document.querySelectorAll('.about-card, .project-card, .skill-group, .quest-desc').forEach(card => {
     card.addEventListener('click', () => {}, {passive: true});
 });
 document.getElementById('current-year').textContent = new Date().getFullYear();
@@ -120,7 +120,7 @@ window.addEventListener('resize', () => {
 function scaleWidgets() {
     document.querySelectorAll('.scale-wrapper').forEach(wrapper => {
         const width = wrapper.clientWidth;
-        const frame = wrapper.querySelector('.scaled-frame, .scaled-object');
+        const frame = wrapper.querySelector('.scaled-frame');
         if (!frame) return;
         if (width > 0 && width < 650) {
             frame.style.transform = `scale(${width / 650})`;

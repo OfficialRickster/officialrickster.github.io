@@ -601,7 +601,6 @@ p:last-child {
 }
 .steam-wrapper { aspect-ratio: 650 / 190; }
 .itch-wrapper { aspect-ratio: 650 / 167; }
-.scaled-object,
 .scaled-frame {
     position: absolute;
     top: 0;
@@ -612,9 +611,7 @@ p:last-child {
     transform-origin: top left;
     transform: scale(1);
 }
-.steam-object,
 .steam-frame { height: 190px; }
-.itch-object,
 .itch-frame { height: 167px; }
 .skills-layout {
     display: grid;
@@ -735,24 +732,7 @@ p:last-child {
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
 }
-.education-item {
-    background: linear-gradient(145deg, var(--bg-secondary), var(--bg-tertiary));
-    border: 1px solid var(--border-light);
-    border-radius: 12px;
-    padding: 1rem 1.8rem;
-    margin-bottom: 1.5rem;
-    transition: all 0.3s ease;
-}
-.education-item:hover,
-.education-item:active {
-    border-color: var(--border-focus);
-    box-shadow: var(--shadow-glow);
-}
-.education-item h3 {
-    color: var(--text-heading);
-    margin-bottom: 0.8rem;
-    font-size: 1.4rem;
-}
+
 footer {
     text-align: center;
     padding-top: 3rem;
@@ -822,7 +802,7 @@ footer {
     .social-links a i {
         font-size: 1.3rem;
     }
-    .about-card, .skill-group, .education-item {
+    .about-card, .skill-group {
         padding: 1.5rem;
     }
     .about-card {
@@ -915,6 +895,9 @@ footer {
     background: linear-gradient(145deg, var(--bg-secondary), var(--bg-tertiary));
     border-radius: 16px;
     border: 1px solid var(--border-light);
+}
+#contact p {
+    margin-bottom: 2rem;
 }
 .contact-buttons {
     display: flex;
@@ -1126,7 +1109,6 @@ footer {
     .about-card:hover,
     .project-card:hover,
     .skill-group:hover,
-    .education-item:hover,
     .quest-desc:hover {
         transform: translateY(-3px);
         border-color: var(--border-focus);
@@ -1141,8 +1123,6 @@ footer {
     .project-card:active,
     .skill-group:hover,
     .skill-group:active,
-    .education-item:hover,
-    .education-item:active,
     .quest-desc:hover,
     .quest-desc:active {
         transform: none !important;
