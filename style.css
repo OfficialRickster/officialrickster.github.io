@@ -17,13 +17,16 @@
     margin: 0;
     padding: 0;
 }
+html {
+    overflow-x: clip;
+}
 body {
     font-family: 'Outfit', sans-serif;
     background-color: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: visible;
 }
 a, button {
     -webkit-tap-highlight-color: transparent;
@@ -157,14 +160,11 @@ p:last-child {
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
-    box-shadow: var(--shadow-subtle);
 }
-@media (hover: hover) {
-    .about-card:hover {
-        transform: translateY(-3px);
-        border-color: var(--border-focus);
-        box-shadow: var(--shadow-glow);
-    }
+.about-card:hover,
+.about-card:active {
+    border-color: var(--border-focus);
+    box-shadow: var(--shadow-glow);
 }
 .about-card::before {
     content: '';
@@ -184,7 +184,6 @@ p:last-child {
     border-radius: 14px;
     background: var(--bg-tertiary);
     border: 2px solid rgba(88, 166, 255, 0.5);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -453,7 +452,7 @@ p:last-child {
         box-sizing: border-box;
         text-align: center;
         border-radius: 8px;
-        padding: 0.8rem 1.2rem;
+        padding: 0.6rem 1.2rem;
     }
     .filter-active-bg {
         border-radius: 8px;
@@ -475,8 +474,8 @@ p:last-child {
     transition: all 0.3s ease;
     will-change: transform, box-shadow, border-color;
 }
-.project-card:hover {
-    transform: translateY(-3px);
+.project-card:hover,
+.project-card:active {
     border-color: var(--border-focus);
     box-shadow: var(--shadow-glow);
 }
@@ -603,7 +602,8 @@ p:last-child {
 }
 .steam-wrapper { aspect-ratio: 650 / 190; }
 .itch-wrapper { aspect-ratio: 650 / 167; }
-.scaled-object {
+.scaled-object,
+.scaled-frame {
     position: absolute;
     top: 0;
     left: 0;
@@ -613,23 +613,35 @@ p:last-child {
     transform-origin: top left;
     transform: scale(1);
 }
-.steam-object { height: 190px; }
-.itch-object { height: 167px; }
+.steam-object,
+.steam-frame { height: 190px; }
+.itch-object,
+.itch-frame { height: 167px; }
 .skills-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    min-width: 0;
+    width: 100%;
+}
+.skills-layout > * {
+    min-width: 0;
+    max-width: 100%;
 }
 .skills-right-col {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    min-width: 0;
 }
 .radar-group {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
 }
 .radar-group h3 {
     width: 100%;
@@ -637,11 +649,18 @@ p:last-child {
 .radar-canvas-container {
     position: relative;
     width: 100%;
+    max-width: 100%;
     aspect-ratio: 1 / 1;
     margin: auto 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 0;
+    overflow: hidden;
+}
+.radar-canvas-container canvas {
+    max-width: 100% !important;
+    max-height: 100% !important;
 }
 .skill-group {
     display: flex;
@@ -654,8 +673,8 @@ p:last-child {
     transition: all 0.3s ease;
     flex: 1;
 }
-.skill-group:hover {
-    transform: translateY(-3px);
+.skill-group:hover,
+.skill-group:active {
     border-color: var(--border-focus);
     box-shadow: var(--shadow-glow);
 }
@@ -725,8 +744,8 @@ p:last-child {
     margin-bottom: 1.5rem;
     transition: all 0.3s ease;
 }
-.education-item:hover {
-    transform: translateY(-3px);
+.education-item:hover,
+.education-item:active {
     border-color: var(--border-focus);
     box-shadow: var(--shadow-glow);
 }
@@ -757,9 +776,22 @@ footer {
     pointer-events: none;
     user-select: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 768px), 
+       (hover: none) and (pointer: coarse), 
+       (max-height: 550px), 
+       (max-width: 1024px) and (orientation: landscape) and (max-height: 600px) {
     .sidebar-nav {
-        display: none;
+        display: none !important;
+    }
+}
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: visible !important;
+    }
+    header {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        width: calc(100% + 2rem);
     }
     h1 {
         font-size: 2.5rem;
@@ -769,6 +801,10 @@ footer {
         letter-spacing: 1.5px;
     }
     .social-links {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        width: calc(100% + 2rem);
+        max-width: calc(100% + 2rem);
         gap: 0.8rem;
         padding: 1rem 0.5rem;
     }
@@ -999,9 +1035,9 @@ footer {
     border: 1px solid var(--border-light);
     transition: all 0.3s ease;
 }
-.quest-desc:hover {
+.quest-desc:hover,
+.quest-desc:active {
     border-color: var(--border-focus);
-    transform: translateX(5px);
     box-shadow: var(--shadow-glow);
 }
 .sidebar-nav {
@@ -1020,11 +1056,7 @@ footer {
     overflow: hidden;
     box-shadow: 8px 0 24px rgba(0, 0, 0, 0.4);
 }
-.sidebar-nav:hover {
-    width: 200px;
-    box-shadow: 8px 0 32px rgba(88, 166, 255, 0.15);
-    border-color: var(--border-focus);
-}
+
 .sidebar-nav ul {
     list-style: none;
     padding: 0;
@@ -1070,6 +1102,11 @@ footer {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 @media (hover: hover) {
+    .sidebar-nav:hover {
+        width: 200px;
+        box-shadow: 8px 0 32px rgba(88, 166, 255, 0.15);
+        border-color: var(--border-focus);
+    }
     .sidebar-nav:hover .nav-text {
         opacity: 1;
         transform: translateX(0);
@@ -1087,6 +1124,35 @@ footer {
         transform: scale(1.1);
     }
 }
+
+/* Card Hover Lift: Desktop ONLY */
+@media (hover: hover) and (pointer: fine) {
+    .about-card:hover,
+    .project-card:hover,
+    .skill-group:hover,
+    .education-item:hover,
+    .quest-desc:hover {
+        transform: translateY(-3px);
+        border-color: var(--border-focus);
+        box-shadow: var(--shadow-glow);
+    }
+}
+
+/* Mobile & Touch: Glow without lift */
+@media (hover: none), (pointer: coarse), (max-width: 768px) {
+    .about-card:hover,
+    .about-card:active,
+    .project-card:hover,
+    .project-card:active,
+    .skill-group:hover,
+    .skill-group:active,
+    .education-item:hover,
+    .education-item:active,
+    .quest-desc:hover,
+    .quest-desc:active {
+        transform: none !important;
+    }
+}
 #scrollToTopBtn {
     position: fixed;
     bottom: 30px;
@@ -1100,10 +1166,11 @@ footer {
     font-size: 1.2rem;
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    z-index: 1000;
+    z-index: 1200;
     opacity: 0;
     transform: translateY(20px);
     visibility: hidden;
+    pointer-events: none;
     transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
     display: flex;
     justify-content: center;
@@ -1113,6 +1180,7 @@ footer {
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
+    pointer-events: auto;
 }
 @media (hover: hover) {
     #scrollToTopBtn:hover {
