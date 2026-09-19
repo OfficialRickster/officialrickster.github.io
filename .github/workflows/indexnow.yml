@@ -1,18 +1,15 @@
 name: IndexNow Notification
-
 on:
   push:
     branches:
       - main
   workflow_dispatch:
-
 jobs:
   notify-search-engines:
     runs-on: ubuntu-latest
     steps:
       - name: Wait for GitHub Pages build
         run: sleep 30
-
       - name: Notify IndexNow (Yep.com, Bing, Yandex, Seznam)
         run: |
           response=$(curl -s -o /dev/null -w "%{http_code}" -X POST "https://api.indexnow.org/indexnow" \
