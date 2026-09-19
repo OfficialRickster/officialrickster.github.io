@@ -1,0 +1,28 @@
+name: IndexNow Notification
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  notify-search-engines:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for GitHub Pages build
+        run: sleep 30
+
+      - name: Notify IndexNow (Yep.com, Bing, Yandex, Seznam)
+        run: |
+          response=$(curl -s -o /dev/null -w "%{http_code}" -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "host": "officialrickster.github.io",
+              "key": "94d8b6c32eb84746b3611e36a014665a",
+              "keyLocation": "https://officialrickster.github.io/94d8b6c32eb84746b3611e36a014665a.txt",
+              "urlList": [
+                "https://officialrickster.github.io/"
+              ]
+            }')
+          echo "IndexNow response status code: $response"
