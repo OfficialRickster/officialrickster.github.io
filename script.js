@@ -99,7 +99,6 @@ let ticking = false;
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 window.addEventListener('scroll', () => {
     if (window.innerWidth < 768 || prefersReducedMotion.matches) return;
-
     if (!ticking) {
         window.requestAnimationFrame(() => {
             const scrollY = window.scrollY;
@@ -145,11 +144,9 @@ if (window.ResizeObserver) {
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
 const filterActiveBg = document.querySelector('.filter-active-bg');
-
 function updateFilterBg(btn, animate = true) {
     if (!filterActiveBg || !btn) return;
     if (btn.offsetWidth === 0 && btn.offsetHeight === 0) return;
-
     if (!animate) {
         filterActiveBg.style.transition = 'none';
     }
@@ -162,11 +159,9 @@ function updateFilterBg(btn, animate = true) {
         filterActiveBg.style.transition = '';
     }
 }
-
 function refreshFilterPill() {
     const activeBtn = document.querySelector('.filter-btn.active');
     if (!activeBtn) return;
-
     if (window.innerWidth > 950) {
         const header = document.querySelector('.projects-header');
         const toggleBtn = document.querySelector('.mobile-filter-toggle');
@@ -178,12 +173,10 @@ function refreshFilterPill() {
             toggleBtn.setAttribute('aria-expanded', 'false');
         }
     }
-
     requestAnimationFrame(() => {
         updateFilterBg(activeBtn, false);
     });
 }
-
 const initialActiveBtn = document.querySelector('.filter-btn.active');
 if (initialActiveBtn) {
     updateFilterBg(initialActiveBtn, false);
@@ -194,7 +187,6 @@ if (initialActiveBtn) {
         setTimeout(refreshFilterPill, 300);
     });
 }
-
 if (window.ResizeObserver) {
     const filterContainer = document.querySelector('.project-filters');
     if (filterContainer) {
@@ -206,7 +198,6 @@ if (window.ResizeObserver) {
         }).observe(filterContainer);
     }
 }
-
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         filterBtns.forEach(b => {
@@ -217,7 +208,6 @@ filterBtns.forEach(btn => {
         btn.setAttribute('aria-pressed', 'true');
         updateFilterBg(btn, true);
         requestAnimationFrame(() => updateFilterBg(btn, true));
-
         const filterValue = btn.getAttribute('data-filter');
         projectCards.forEach(card => {
             if (filterValue === 'all') {
@@ -235,7 +225,6 @@ filterBtns.forEach(btn => {
                 }
             }
         });
-
         if (window.innerWidth <= 950) {
             const header = document.querySelector('.projects-header');
             const toggleBtn = document.querySelector('.mobile-filter-toggle');
@@ -244,16 +233,13 @@ filterBtns.forEach(btn => {
         }
     });
 });
-
 const mobileFilterToggle = document.querySelector('.mobile-filter-toggle');
 const projectsHeader = document.querySelector('.projects-header');
-
 if (mobileFilterToggle && projectsHeader) {
     mobileFilterToggle.addEventListener('click', () => {
         projectsHeader.classList.toggle('show-filters');
         mobileFilterToggle.classList.toggle('active');
         mobileFilterToggle.setAttribute('aria-expanded', projectsHeader.classList.contains('show-filters'));
-
         if (projectsHeader.classList.contains('show-filters')) {
             const activeBtn = document.querySelector('.filter-btn.active');
             if (activeBtn && filterActiveBg) {
@@ -263,7 +249,6 @@ if (mobileFilterToggle && projectsHeader) {
             }
         }
     });
-
     document.addEventListener('click', (e) => {
         if (window.innerWidth <= 950 && projectsHeader.classList.contains('show-filters')) {
             if (!projectsHeader.contains(e.target)) {
