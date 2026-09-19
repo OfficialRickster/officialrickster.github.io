@@ -152,8 +152,7 @@ function updateFilterBg(btn, animate = true) {
     }
     filterActiveBg.style.width = `${btn.offsetWidth}px`;
     filterActiveBg.style.height = `${btn.offsetHeight}px`;
-    filterActiveBg.style.left = `${btn.offsetLeft}px`;
-    filterActiveBg.style.top = `${btn.offsetTop}px`;
+    filterActiveBg.style.transform = `translate3d(${btn.offsetLeft}px, ${btn.offsetTop}px, 0)`;
     if (!animate) {
         void filterActiveBg.offsetHeight;
         filterActiveBg.style.transition = '';
@@ -200,6 +199,8 @@ if (window.ResizeObserver) {
 }
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
+        if (btn.classList.contains('active')) return;
+
         filterBtns.forEach(b => {
             b.classList.remove('active');
             b.setAttribute('aria-pressed', 'false');
@@ -207,30 +208,31 @@ filterBtns.forEach(btn => {
         btn.classList.add('active');
         btn.setAttribute('aria-pressed', 'true');
         updateFilterBg(btn, true);
-        requestAnimationFrame(() => updateFilterBg(btn, true));
+
         const filterValue = btn.getAttribute('data-filter');
         projectCards.forEach(card => {
-            if (filterValue === 'all') {
-                card.style.display = 'flex';
-                card.classList.remove('active');
-                setTimeout(() => card.classList.add('active'), 50);
-            } else {
+            const isMatch = (filterValue === 'all') || (() => {
                 const tags = Array.from(card.querySelectorAll('.genre-tag, .engine-tag, .role-tag')).map(t => t.textContent.trim());
-                if (tags.some(tag => tag.includes(filterValue))) {
+                return tags.some(tag => tag.includes(filterValue));
+            })();
+
+            const isCurrentlyVisible = card.style.display !== 'none';
+
+            if (isMatch) {
+                if (!isCurrentlyVisible) {
                     card.style.display = 'flex';
                     card.classList.remove('active');
-                    setTimeout(() => card.classList.add('active'), 50);
-                } else {
-                    card.style.display = 'none';
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            card.classList.add('active');
+                        });
+                    });
                 }
+            } else {
+                card.style.display = 'none';
+                card.classList.remove('active');
             }
         });
-        if (window.innerWidth <= 950) {
-            const header = document.querySelector('.projects-header');
-            const toggleBtn = document.querySelector('.mobile-filter-toggle');
-            if (header) header.classList.remove('show-filters');
-            if (toggleBtn) toggleBtn.classList.remove('active');
-        }
     });
 });
 const mobileFilterToggle = document.querySelector('.mobile-filter-toggle');
