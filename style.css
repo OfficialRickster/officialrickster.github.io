@@ -583,12 +583,15 @@ p:last-child {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 500;
+    line-height: 1;
+    transform: translateY(1px);
 }
 .studio-extended-logo {
     height: 44px;
     width: auto;
     max-height: 44px;
     max-width: 180px;
+    aspect-ratio: 1800 / 480;
     object-fit: contain;
     opacity: 0.95;
     pointer-events: none;
@@ -596,12 +599,12 @@ p:last-child {
 }
 .project-embed {
     background-color: var(--bg-tertiary);
-    padding: 1rem;
+    padding: 20px 1rem;
     border-top: 1px solid var(--border-light);
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 230px;
+    min-height: auto;
     min-width: 0;
 }
 .scale-wrapper {
@@ -612,6 +615,7 @@ p:last-child {
 }
 .steam-wrapper { aspect-ratio: 650 / 190; }
 .itch-wrapper { aspect-ratio: 650 / 167; }
+.scaled-object,
 .scaled-frame {
     position: absolute;
     top: 0;
@@ -621,9 +625,21 @@ p:last-child {
     overflow: hidden;
     transform-origin: top left;
     transform: scale(1);
+    color-scheme: light;
+    background-color: transparent;
 }
-.steam-frame { height: 190px; }
-.itch-frame { height: 167px; }
+.steam-object,
+.steam-frame {
+    height: 190px;
+    color-scheme: light;
+    background-color: transparent;
+}
+.itch-object,
+.itch-frame {
+    height: 167px;
+    color-scheme: light;
+    background-color: transparent;
+}
 .skills-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -839,7 +855,7 @@ footer {
         padding: 1.2rem;
     }
     .project-embed {
-        padding: 0 0 1.2rem 0;
+        padding: 20px 1rem;
         min-height: auto;
     }
     .role-tag, .engine-tag, .genre-tag {

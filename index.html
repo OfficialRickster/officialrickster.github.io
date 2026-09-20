@@ -268,15 +268,16 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://store.steampowered.com">
     <link rel="preconnect" href="https://itch.io">
-    <link rel="preconnect" href="https://img.itch.zone" crossorigin>
+    <link rel="dns-prefetch" href="https://store.fastly.steamstatic.com">
+    <link rel="dns-prefetch" href="https://shared.fastly.steamstatic.com">
+    <link rel="dns-prefetch" href="https://static.itch.io">
     <link rel="dns-prefetch" href="https://img.itch.zone">
-    <link rel="preload" as="image" href="https://img.itch.zone/aW1nLzIzODk1ODgzLnBuZw==/180x143%23c/5ZCRYR.png">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"></noscript>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="style.css?v=2.3">
+    <link rel="stylesheet" href="style.css?v=2.6">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPJS0GCNQX"></script>
     <link rel="icon" type="image/png" href="my-favicon/favicon-96x96.png" sizes="96x96" />
@@ -372,12 +373,12 @@
                             <p>A cooperative experience featuring deep build customization with countless combinations of playstyles.<br>Working alongside a dedicated team, I architect the core systems and maintain balance.</p>
                             <div class="project-studio-banner">
                                 <span class="studio-label">Developed by</span>
-                                <img src="Assets/AL-ExtendedLogo.svg" alt="Art Lake Entertainment" class="studio-extended-logo" width="143" height="44">
+                                <img src="Assets/AL-ExtendedLogo.svg" alt="Art Lake Entertainment" class="studio-extended-logo" width="165" height="44" draggable="false">
                             </div>
                         </div>
                         <div class="project-embed">
                             <div class="scale-wrapper steam-wrapper">
-                                <iframe src="https://store.steampowered.com/widget/3953940/?l=english" title="Steam Store Widget for Death Rose" width="650" height="190" loading="eager" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms" class="scaled-frame steam-frame"></iframe>
+                                <iframe title="Steam Store Widget for Death Rose" src="https://store.steampowered.com/widget/3953940/?l=english" width="650" height="190" class="scaled-frame steam-frame" frameborder="0" allowtransparency="true" style="color-scheme: light; background: transparent;" loading="eager"></iframe>
                             </div>
                         </div>
                     </div>
@@ -401,9 +402,7 @@
                         </div>
                         <div class="project-embed">
                             <div class="scale-wrapper itch-wrapper">
-                                <iframe src="https://itch.io/embed/3691266?linkback=true&amp;border_width=0&amp;bg_color=2a313c&amp;fg_color=eeeeee&amp;link_color=528b2d&amp;border_color=363636" title="Itch.io Store Widget for Project V" width="650" height="167" loading="eager" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms" class="scaled-frame itch-frame">
-                                    <a href="https://officialrickster.itch.io/project-v" title="Project V on Itch.io">Project V by Rick</a>
-                                </iframe>
+                                <iframe title="Itch.io Store Widget for Project V" src="https://itch.io/embed/3691266?linkback=true&amp;border_width=0&amp;bg_color=2a313c&amp;fg_color=eeeeee&amp;link_color=528b2d&amp;border_color=363636" width="650" height="167" class="scaled-frame itch-frame" frameborder="0" allowtransparency="true" style="color-scheme: light; background: transparent;" loading="eager"><a href="https://officialrickster.itch.io/project-v">Project V by Rick</a></iframe>
                             </div>
                         </div>
                     </div>
@@ -515,6 +514,6 @@
         </footer>
     </div>
     <button id="scrollToTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
-    <script defer src="script.js?v=1.3"></script>
+    <script defer src="script.js?v=1.4"></script>
 </body>
 </html>
