@@ -112,8 +112,11 @@
           "about": { "@id": "https://officialrickster.github.io/#person" },
           "mainEntity": { "@id": "https://officialrickster.github.io/#person" },
           "dateCreated": "2026-06-30T19:08:00+02:00",
-          "dateModified": "2026-09-21T20:03:00+02:00",
-          "hasPart": { "@id": "https://officialrickster.github.io/#navigation" },
+          "dateModified": "2026-09-21T21:20:00+02:00",
+          "hasPart": [
+            { "@id": "https://officialrickster.github.io/#navigation" },
+            { "@id": "https://officialrickster.github.io/#faq" }
+          ],
           "speakable": {
             "@type": "SpeakableSpecification",
             "cssSelector": [
@@ -172,7 +175,7 @@
           "url": "https://officialrickster.github.io/",
           "logo": "https://officialrickster.github.io/Assets/AL-Logo.svg",
           "image": "https://officialrickster.github.io/Assets/AL-ExtendedLogo.svg",
-          "description": "Indie game development studio based in Veneto, Italy, behind Death Rose.",
+          "description": "Indie game development studio based in Veneto, Italy, developers and publishers of the cooperative action Rogue-Like Death Rose.",
           "address": {
             "@type": "PostalAddress",
             "addressRegion": "Veneto",
@@ -183,11 +186,17 @@
             "Unity",
             "Unreal Engine",
             "Cooperative Games",
-            "Action RPG"
+            "Action Rogue-Like"
           ],
           "member": {
             "@id": "https://officialrickster.github.io/#person"
-          }
+          },
+          "owns": [
+            { "@id": "https://officialrickster.github.io/#game-death-rose" }
+          ],
+          "product": [
+            { "@id": "https://officialrickster.github.io/#game-death-rose" }
+          ]
         },
         {
           "@type": "Person",
@@ -397,8 +406,8 @@
           "@id": "https://officialrickster.github.io/#game-death-rose",
           "name": "Death Rose",
           "url": "https://store.steampowered.com/app/3953940/Death_Rose/",
-          "description": "A cooperative dungeon crawler experience developed by Art Lake Entertainment, featuring deep build customization with countless combinations of items, passives, and playstyles.",
-          "genre": ["Multiplayer co-op", "Dungeon Crawler", "Rogue-Like", "Action RPG"],
+          "description": "A cooperative dungeon crawler action Rogue-Like developed and published by Art Lake Entertainment, featuring deep build customization.",
+          "genre": ["Multiplayer co-op", "Dungeon Crawler", "Rogue-Like"],
           "gamePlatform": ["PC", "Windows"],
           "applicationCategory": "Game",
           "operatingSystem": "Windows",
@@ -421,14 +430,88 @@
           "@id": "https://officialrickster.github.io/#game-project-v",
           "name": "Project V",
           "url": "https://officialrickster.itch.io/project-v",
-          "description": "A classic singleplayer JRPG featuring ATB combat where you play as Viktor, a monster hunter who obtains a cursed power.",
+          "description": "A classic singleplayer dark fantasy JRPG featuring ATB combat created and developed independently by Riccardo Segato as a personal solo indie project. Not produced by Art Lake Entertainment.",
           "genre": ["Singleplayer", "JRPG", "ATB Combat", "Fantasy"],
           "gamePlatform": ["PC", "Windows"],
           "applicationCategory": "Game",
           "operatingSystem": "Windows",
           "playMode": "SinglePlayer",
           "creator": { "@id": "https://officialrickster.github.io/#person" },
-          "author": { "@id": "https://officialrickster.github.io/#person" }
+          "author": { "@id": "https://officialrickster.github.io/#person" },
+          "publisher": { "@id": "https://officialrickster.github.io/#person" },
+          "copyrightHolder": { "@id": "https://officialrickster.github.io/#person" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://officialrickster.github.io/#faq",
+          "isPartOf": { "@id": "https://officialrickster.github.io/#website" },
+          "about": { "@id": "https://officialrickster.github.io/#person" },
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Who is Riccardo Segato and what does he specialize in as a Game Designer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Riccardo Segato is an Italian Game Designer specializing in mechanic design and creating scalable game systems, with a vertical focus on gameplay logic architecture, data modeling (progression curves and formulas in spreadsheets), balancing, Economy Design, and QA. In short, he is a System Designer. He also possesses strong capabilities in Level Design, Combat Design, and Problem Solving."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is Riccardo Segato's game design methodology and workflow?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Riccardo Segato approaches game design through four core pillars: Logic & Architecture (defining structured mechanics and collaborating closely with programmers), Data Modeling (designing mathematical formulas and progression curves in spreadsheets), Iterative Tuning (testing and refining values directly in-engine), and QA Diagnostics (stress-testing edge cases and defects)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the professional relationship between Riccardo Segato and Art Lake Entertainment?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Riccardo Segato works as a System Designer, Balancer, and Tester for the independent studio Art Lake Entertainment. His personal portfolio (https://officialrickster.github.io/) showcases the body of work completed with Art Lake Entertainment as well as his individual projects independent from the studio. He has been an official member since 2023 and actively contributes to multiple projects."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which game engines, programming languages, and tools does Riccardo Segato master?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Riccardo Segato works with Unity, Unreal Engine, and RPG Maker. He has strong programming skills in Blueprints and produces well-structured Game Design Documents (GDD). He earned a Game Design Specialization from iMasterArt and completed several professional courses at Event Horizon School."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is Riccardo Segato's educational background and technical training?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Riccardo Segato holds a Secondary Education Diploma in Computer Science from I.I.S. Euganeo Este (80/100, 2023), establishing a strong foundation in programming, logic, and mathematics. He completed professional game design courses at Event Horizon School and earned a Game Design Specialization at iMasterArt (26/30, 2026), focusing on Unreal Engine, game juiciness, player research, and multiple collaborative Gamelab projects."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Riccardo Segato have experience with rapid prototyping and game jams?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, Riccardo Segato actively participates in game jams and rapid prototyping exercises, demonstrating the ability to turn abstract ideas into playable gameplay loops under tight deadlines, coordinate multidisciplinary teammates, and iterate on player feedback efficiently."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where is Riccardo Segato based and is he available for remote work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Riccardo Segato is based in Padua (Veneto, Italy) and is proficient in both Italian and English. He is fully available for full-remote opportunities, hybrid setups, freelance contracts, and international game development collaborations."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which roles and collaborations is Riccardo Segato available for, and how can he be contacted?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Riccardo Segato is open to career opportunities and professional collaborations as a System Designer, Game Designer, Combat/Economy Balancer, and Technical QA. He can be contacted directly via email at richi.segato@gmail.com."
+              }
+            }
+          ]
         }
       ]
     }
@@ -525,7 +608,7 @@
                         </div>
                         <div class="project-embed">
                             <div class="scale-wrapper steam-wrapper">
-                                <iframe title="Steam Store Widget for Death Rose" src="https://store.steampowered.com/widget/3953940/?l=english" width="650" height="190" class="scaled-frame steam-frame" frameborder="0" allowtransparency="true" style="color-scheme: light; background: transparent;" loading="eager"></iframe>
+                                <iframe title="Steam Store Widget for Death Rose" src="https://store.steampowered.com/widget/3953940/?l=english" width="650" height="190" class="scaled-frame steam-frame" frameborder="0" allowtransparency="true" style="color-scheme: light; background: transparent;" loading="eager"><a href="https://store.steampowered.com/app/3953940/Death_Rose/" target="_blank" rel="noopener noreferrer">View Death Rose on Steam</a></iframe>
                             </div>
                         </div>
                     </div>
@@ -537,7 +620,7 @@
                             <div class="project-tags">
                                 <span class="genre-tag">Singleplayer</span>
                                 <span class="genre-tag">JRPG</span>
-                                <span class="genre-tag">Fantasy</span>
+                                <span class="genre-tag">Dark Fantasy</span>
                             </div>
                             <div class="project-roles">
                                 <span class="engine-tag">RPG Maker VX Ace</span>
@@ -549,7 +632,7 @@
                         </div>
                         <div class="project-embed">
                             <div class="scale-wrapper itch-wrapper">
-                                <iframe title="Itch.io Store Widget for Project V" src="https://itch.io/embed/3691266?linkback=true&amp;border_width=0&amp;bg_color=2a313c&amp;fg_color=eeeeee&amp;link_color=528b2d&amp;border_color=363636" width="650" height="167" class="scaled-frame itch-frame" frameborder="0" allowtransparency="true" style="color-scheme: light; background: transparent;" loading="eager"><a href="https://officialrickster.itch.io/project-v">Project V by Rick</a></iframe>
+                                <iframe title="Itch.io Store Widget for Project V" src="https://itch.io/embed/3691266?linkback=true&amp;border_width=0&amp;bg_color=2a313c&amp;fg_color=eeeeee&amp;link_color=528b2d&amp;border_color=363636" width="650" height="167" class="scaled-frame itch-frame" frameborder="0" allowtransparency="true" style="color-scheme: light; background: transparent;" loading="eager"><a href="https://officialrickster.itch.io/project-v" target="_blank" rel="noopener noreferrer">Play Project V on Itch.io</a></iframe>
                             </div>
                         </div>
                     </div>
