@@ -42,7 +42,7 @@ a, button {
     padding: 0 1rem;
 }
 header {
-    padding: 4rem 0 2rem 0;
+    padding: 4rem 0 0.5rem 0;
     text-align: center;
     background: rgba(10, 14, 19, 0.85);
     backdrop-filter: blur(12px);
@@ -139,7 +139,7 @@ header p {
     }
 }
 section {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
     scroll-margin-top: 130px;
 }
 h2 {
@@ -185,9 +185,9 @@ p:last-child {
 }
 .about-photo-wrapper {
     position: relative;
-    width: 175px;
-    height: 175px;
-    min-width: 175px;
+    width: 220px;
+    height: 220px;
+    min-width: 220px;
     aspect-ratio: 1 / 1;
     border-radius: 14px;
     background: var(--bg-tertiary);
@@ -521,7 +521,7 @@ p:last-child {
     background-color: rgba(139, 148, 158, 0.15);
     color: var(--text-secondary);
     border: 1px solid rgba(139, 148, 158, 0.5);
-    padding: 0.4rem 0.8rem;
+    padding: 0.45rem 0.8rem 0.35rem;
     border-radius: 6px;
     font-size: 0.75rem;
     font-weight: 700;
@@ -531,12 +531,13 @@ p:last-child {
     display: inline-flex;
     align-items: center;
     white-space: nowrap;
+    line-height: 1;
 }
 .engine-tag {
     background-color: rgba(88, 166, 255, 0.15);
     color: var(--accent-hover);
     border: 1px solid rgba(88, 166, 255, 0.5);
-    padding: 0.4rem 0.8rem;
+    padding: 0.45rem 0.8rem 0.35rem;
     border-radius: 6px;
     font-size: 0.75rem;
     font-weight: 700;
@@ -546,6 +547,7 @@ p:last-child {
     display: inline-flex;
     align-items: center;
     white-space: nowrap;
+    line-height: 1;
 }
 .project-tags {
     display: flex;
@@ -558,7 +560,7 @@ p:last-child {
     background-color: rgba(163, 113, 247, 0.1);
     color: #d2a8ff;
     border: 1px solid rgba(163, 113, 247, 0.4);
-    padding: 0.4rem 0.8rem;
+    padding: 0.45rem 0.8rem 0.35rem;
     border-radius: 6px;
     font-size: 0.75rem;
     font-weight: 700;
@@ -568,14 +570,14 @@ p:last-child {
     display: inline-flex;
     align-items: center;
     white-space: nowrap;
+    line-height: 1;
 }
 .project-studio-banner {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    margin-top: 1.2rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(45, 53, 64, 0.6);
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--border-light);
 }
 .studio-label {
     font-size: 0.8rem;
@@ -584,7 +586,6 @@ p:last-child {
     letter-spacing: 1px;
     font-weight: 500;
     line-height: 1;
-    transform: translateY(1px);
 }
 .studio-extended-logo {
     height: 44px;
@@ -606,6 +607,9 @@ p:last-child {
     align-items: center;
     min-height: auto;
     min-width: 0;
+}
+#death-rose .project-embed {
+    padding-bottom: 17px;
 }
 .scale-wrapper {
     width: 100%;
@@ -759,7 +763,6 @@ p:last-child {
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
 }
-
 footer {
     text-align: center;
     padding-top: 3rem;
@@ -813,9 +816,11 @@ footer {
         max-width: calc(100% + 2rem);
         gap: 0.8rem;
         padding: 1rem 0.5rem;
+        margin-bottom: 3rem;
     }
     .about-text, .project-content p, .quest-desc {
         font-size: 13px;
+        margin-bottom: 1rem;
     }
     .social-links a {
         padding: 0.8rem;
@@ -829,8 +834,8 @@ footer {
     .social-links a i {
         font-size: 1.3rem;
     }
-    .about-card, .skill-group {
-        padding: 1.5rem;
+    .about-card, .skill-group, .quest-desc {
+        padding: 0.75rem;
     }
     .about-card {
         flex-direction: column;
@@ -838,9 +843,9 @@ footer {
         gap: 1.2rem;
     }
     .about-photo-wrapper {
-        width: 140px;
-        height: 140px;
-        min-width: 140px;
+        width: 160px;
+        height: 160px;
+        min-width: 160px;
         aspect-ratio: 1 / 1;
         margin: 0 auto;
     }
@@ -852,15 +857,33 @@ footer {
         padding: 0;
     }
     .project-content {
-        padding: 1.2rem;
+        padding: 0.75rem;
+    }
+    .project-content p:last-child {
+        margin-bottom: 0;
+    }
+    .project-roles {
+        margin-bottom: 0.75rem;
+    }
+    .project-studio-banner {
+        margin-top: 0;
+        padding: 0.85rem 0.75rem;
+        justify-content: center;
     }
     .project-embed {
-        padding: 20px 1rem;
+        padding: 16px 0.75rem;
         min-height: auto;
     }
+    #death-rose .project-embed {
+        padding-bottom: 14px;
+    }
     .role-tag, .engine-tag, .genre-tag {
-        font-size: 0.7rem;
-        padding: 0.3rem 0.6rem;
+        font-size: 0.62rem;
+        padding: 0.35rem 0.5rem 0.25rem;
+        line-height: 1;
+    }
+    .genre-tag {
+        padding: 0.31rem 0.5rem 0.29rem;
     }
     .project-tags, .project-roles, .role-tags-wrapper {
         gap: 0.4rem;
@@ -872,13 +895,13 @@ footer {
         grid-template-columns: 1fr;
     }
     section {
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
     }
 }
 .reveal {
     opacity: 0;
     transform: translateY(40px);
-    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
     will-change: transform, opacity;
 }
 .reveal.active {
@@ -922,6 +945,13 @@ footer {
     background: linear-gradient(145deg, var(--bg-secondary), var(--bg-tertiary));
     border-radius: 16px;
     border: 1px solid var(--border-light);
+    transition: all 0.3s ease;
+    will-change: transform, box-shadow, border-color;
+}
+#contact:hover,
+#contact:active {
+    border-color: var(--border-focus);
+    box-shadow: var(--shadow-glow);
 }
 #contact p {
     margin-bottom: 2rem;
@@ -1131,18 +1161,24 @@ footer {
         transform: scale(1.1);
     }
 }
-/* Card Hover Lift: Desktop ONLY */
 @media (hover: hover) and (pointer: fine) {
+    .about-card,
+    .project-card,
+    .skill-group,
+    .quest-desc,
+    #contact {
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
     .about-card:hover,
     .project-card:hover,
     .skill-group:hover,
-    .quest-desc:hover {
+    .quest-desc:hover,
+    #contact:hover {
         transform: translateY(-3px);
         border-color: var(--border-focus);
         box-shadow: var(--shadow-glow);
     }
 }
-/* Mobile & Touch: Glow without lift */
 @media (hover: none), (pointer: coarse), (max-width: 768px) {
     .about-card:hover,
     .about-card:active,
@@ -1151,7 +1187,9 @@ footer {
     .skill-group:hover,
     .skill-group:active,
     .quest-desc:hover,
-    .quest-desc:active {
+    .quest-desc:active,
+    #contact:hover,
+    #contact:active {
         transform: none !important;
     }
 }
