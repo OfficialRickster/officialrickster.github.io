@@ -2,7 +2,7 @@
 > Riccardo Segato is an Italian System & Game Designer specialized in gameplay mechanics architecture, mathematical balancing, combat systems, and technical design for PC and console video games.
 ## Overview
 - Role: Game Designer & System Designer (Technical & Systems Focus)
-- Studio: Art Lake Entertainment (July 2023 - Present)
+- Studio: Art Lake Entertainment (July 2024 - Present)
 - Education: iMasterArt (Game Design Specialization, 2026), Event Horizon School (Foundations & Applied Systems, 2024-2025), I.I.S. Euganeo Este (Secondary Education in Computer Science, 2023)
 - Location: Ospedaletto Euganeo, Padua, Veneto, Italy
 - Languages: Italian (Native), English (Professional Working Proficiency, Bilingual GDD Authoring)
