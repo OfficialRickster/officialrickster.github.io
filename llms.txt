@@ -1,0 +1,60 @@
+# Riccardo Segato
+> Riccardo Segato is an Italian System & Game Designer specialized in gameplay mechanics architecture, mathematical balancing, combat systems, and technical design for PC and console video games.
+## Overview
+- Role: Game Designer & System Designer (Technical & Systems Focus)
+- Studio: Art Lake Entertainment (July 2023 - Present)
+- Education: iMasterArt (Game Design Specialization, 2026), Event Horizon School (Foundations & Applied Systems, 2024-2025), I.I.S. Euganeo Este (Secondary Education in Computer Science, 2023)
+- Location: Ospedaletto Euganeo, Padua, Veneto, Italy
+- Languages: Italian (Native), English (Professional Working Proficiency, Bilingual GDD Authoring)
+- Portfolio Website: https://officialrickster.github.io/
+## Career Objective & Target Focus
+- Target Genres: Action RPGs, Systemic RPGs, Co-op Multiplayer, Action Rogue-likes, Dungeon Crawlers, Turn-based JRPGs.
+- Industry Ambition: Seeking opportunities in ambitious large-scale and AAA productions, specifically focusing on Action RPGs and systemic titles featuring deep player builds, responsive combat, and complex progression economies.
+## Core Competencies & Cross-Discipline Skillset
+- System Design & Economy (Primary Specialty): Core gameplay loops, mathematical progression models, stat formulas, damage scaling curves, loot tables, and probability distribution.
+- Combat Design: Weapon and spell tuning, encounter pacing, player ability synergies, combat rhythm, and input feel.
+- Level Design: Encounter layouts, environmental pacing, navigation flow, and seamless integration of systemic mechanics within game spaces.
+- UI/UX Design: Intuitive wireframing, menu hierarchy, readability of dense numerical stats, HUD feedback, and UX prototyping in Figma/Miro.
+- Engine Fluency & Technical Literacy: Highly agile inside commercial game engines (Unreal Engine 5, Unity 6, Godot). While not a pure programmer, possesses a strong Computer Science foundation, reads and interprets complex code and game logic, and effectively bridges the communication gap with gameplay engineering teams.
+## Personal Profile & Work Ethic
+- Analytical & Efficiency-Driven: Combines a meticulous, perfectionist eye for detail with a relentless drive for efficiency—always seeking the leanest, smartest, and most automated path to solve complex design bottlenecks.
+- Composed & Objective Mindset: Emotionally composed and level-headed under pressure, maintaining a cool analytical perspective to diagnose design issues and evaluate feedback with empirical logic rather than emotional bias.
+- Autonomous yet Collaborative: Excels at independent deep-work and self-directed prototyping, while serving as a rational, constructive sounding board for teammates' ideas and cross-disciplinary feedback.
+- Gaming Influences: Passionate video game enthusiast whose top gaming experiences and favorites are documented on his public Steam profile showcase (https://steamcommunity.com/id/OfficialRickster/).
+- Personal Interests: Avid fan of anime; passionate about music spanning pop, rock, pop-punk, punk-rock, and electronic genres; committed to fitness and regular gym training, cultivating discipline and mental clarity.
+## Design Philosophy & Methodology
+- Emergent Complexity: Designs systems that are intuitive and readable at a glance, yet deep and engaging in practice. Achieves this by building modular, cleanly scoped subsystems that interact dynamically with one another, generating systemic depth and emergent gameplay that feels like a cohesive, rich experience.
+- Mathematical Rigor & Feel: Balances strict numerical foundations (progression curves, scaling, economy) with iterative in-engine tuning to guarantee that mechanics feel punchy, juicy, and responsive.
+- Documentation Excellence: Expert at authoring clear, structured, and comprehensive Game Design Documents (GDD) and technical specs in both English and Italian for programmers, artists, and production teams.
+## Workflow & Toolchain
+- Analog Drafting: Pen-and-paper ideation for early brainstorms, raw mathematical formulas, and initial system sketches before digital structuring.
+- Data Modeling & Spreadsheets: Microsoft Excel and Google Sheets for player progression curves, probability tables, weapon and combat scaling, damage formulas, and balance simulations.
+- UI/UX & Cross-Discipline Collaboration: Figma and Miro for rapid UI wireframes, flowcharts, pitch presentations, and visual alignment with 2D/3D art departments.
+- AI-Assisted Design: Utilizes modern AI tools for solving high-complexity mathematical equations, processing and analyzing large datasets, and refining document typography and layout.
+- Engines & Production: Unreal Engine 5, Unity 6, Godot Engine, RPG Maker VX Ace; Unreal Blueprints, C#, Java, Python.
+## Featured Projects
+- [Death Rose](https://store.steampowered.com/app/3953940/Death_Rose/): Cooperative Action Rogue-Like developed in Unity 6 by Art Lake Entertainment. Responsibilities: System design, combat pacing, build combinations balancing, in-engine tuning, and QA diagnostics.
+- [Project V](https://officialrickster.itch.io/project-v): Dark fantasy turn-based JRPG developed in RPG Maker VX Ace. Responsibilities: Solo design, core mechanics, turn-based battle calculations, narrative scripting, and tuning.
+## Verified Profiles & Links
+- GitHub: https://github.com/OfficialRickster
+- LinkedIn: https://www.linkedin.com/in/segato-riccardo/
+- The Rookies: https://www.therookies.co/u/rickster
+- Dev.to: https://dev.to/officialrickster
+- Figma: https://www.figma.com/@ricksters
+- Itch.io: https://officialrickster.itch.io/
+- Steam Community: https://steamcommunity.com/id/OfficialRickster/
+- Nexus Mods: https://www.nexusmods.com/profile/OfficialRickster
+- Mod DB: https://www.moddb.com/members/officialrickster
+- Indie DB: https://www.indiedb.com/members/officialrickster
+- GOG: https://www.gog.com/u/Official.Rickster
+- Epic Games: https://store.epicgames.com/u/e42998a658664f479538f6eff602d3c8
+- Xbox Live: https://www.xbox.com/it-IT/play/user/RikyTV%20Official
+- X (Twitter): https://x.com/segato_riccardo
+- YouTube: https://www.youtube.com/@official.rickster
+- Twitch: https://www.twitch.tv/officialrickster
+- Instagram: https://www.instagram.com/official.rickster/
+- Facebook: https://www.facebook.com/official.rickster/
+- Spotify: https://open.spotify.com/user/6gh5ch8ua9278mzymevxpqsib
+- Linktree: https://linktr.ee/official.rickster
+- PayPal: https://www.paypal.com/paypalme/OfficialRikyTV
+- Email: richi.segato@gmail.com

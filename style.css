@@ -249,6 +249,21 @@ p:last-child {
     color: var(--accent-main);
     font-weight: 700;
 }
+.about-nav-hint {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+.inline-internal-link {
+    color: var(--accent-main);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color var(--transition-fast);
+}
+.inline-internal-link:hover {
+    color: var(--accent-hover);
+}
 .about-workflow {
     list-style: none;
     padding: 0;
@@ -500,6 +515,7 @@ p:last-child {
     margin-bottom: 1rem;
 }
 .project-title {
+    margin: 0;
     font-size: 1.6rem;
     font-weight: 600;
     color: var(--text-heading);
@@ -762,6 +778,30 @@ p:last-child {
     background: linear-gradient(90deg, var(--accent-main), #8cd0ff);
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+}
+.skill-bar-fill.fill-50 { width: 50%; }
+.skill-bar-fill.fill-60 { width: 60%; }
+.skill-bar-fill.fill-65 { width: 65%; }
+.skill-bar-fill.fill-70 { width: 70%; }
+.skill-bar-fill.fill-80 { width: 80%; }
+.skill-bar-fill.fill-85 { width: 85%; }
+.skill-bar-fill.fill-95 { width: 95%; }
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+.footer-nav a {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+.footer-nav a:hover {
+    color: var(--accent-main);
 }
 footer {
     text-align: center;
@@ -1049,6 +1089,7 @@ footer {
     z-index: 1;
 }
 .quest-title {
+    margin: 0;
     color: var(--accent-hover);
     font-size: 1.2rem;
     font-weight: 600;
