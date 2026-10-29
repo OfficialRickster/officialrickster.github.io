@@ -259,13 +259,43 @@ if (scrollBtn) {
 const copyEmailBtn = document.getElementById('copyEmailBtn');
 if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', () => {
-        navigator.clipboard.writeText('richi.segato@gmail.com').then(() => {
+        const email = 'richi.segato@gmail.com';
+        const onSuccess = () => {
             const originalHTML = copyEmailBtn.innerHTML;
-            copyEmailBtn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+            copyEmailBtn.innerHTML = '<i class="fa-solid fa-check" aria-hidden="true"></i> Copied!';
             setTimeout(() => {
                 copyEmailBtn.innerHTML = originalHTML;
             }, 2000);
-        }).catch(() => {});
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(email).then(onSuccess).catch(() => {
+                const ta = document.createElement('textarea');
+                ta.value = email;
+                ta.style.position = 'fixed';
+                ta.style.opacity = '0';
+                document.body.appendChild(ta);
+                ta.focus();
+                ta.select();
+                try {
+                    document.execCommand('copy');
+                    onSuccess();
+                } catch (_) {}
+                document.body.removeChild(ta);
+            });
+        } else {
+            const ta = document.createElement('textarea');
+            ta.value = email;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.focus();
+            ta.select();
+            try {
+                document.execCommand('copy');
+                onSuccess();
+            } catch (_) {}
+            document.body.removeChild(ta);
+        }
     });
 }
 })();

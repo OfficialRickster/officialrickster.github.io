@@ -11,6 +11,8 @@
     --border-focus: #58a6ff;
     --shadow-subtle: 0 8px 32px rgba(0, 0, 0, 0.6);
     --shadow-glow: 0 0 15px rgba(88, 166, 255, 0.3);
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
 }
 * {
     box-sizing: border-box;
@@ -19,6 +21,7 @@
 }
 html {
     overflow-x: clip;
+    scroll-behavior: smooth;
 }
 body {
     font-family: 'Outfit', sans-serif;

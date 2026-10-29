@@ -39,12 +39,13 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"></noscript>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    <link rel="stylesheet" href="style.css?v=3.7">
+    <link rel="stylesheet" href="style.css?v=3.8">
     <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPJS0GCNQX"></script>
     <meta name="google-site-verification" content="hffwutsy0ZOFb4CB1auORcxSzdlUuJG3Jgqvb8DzFxU">
     <meta name="yandex-verification" content="569b7600871c4b5b">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="https://officialrickster.github.io/sitemap.xml">
+    <link rel="help" type="text/plain" title="LLMs.txt" href="https://officialrickster.github.io/llms.txt">
     <meta property="og:title" content="Riccardo Segato | Game &amp; System Designer | Portfolio &amp; Projects">
     <meta property="og:description" content="Official portfolio of Riccardo Segato, System &amp; Game Designer at Art Lake. Explore featured game projects, combat mechanics, balancing, and scalable systems.">
     <meta property="og:type" content="website">
@@ -113,7 +114,7 @@
           "about": { "@id": "https://officialrickster.github.io/#person" },
           "mainEntity": { "@id": "https://officialrickster.github.io/#person" },
           "dateCreated": "2026-06-30T19:08:00+02:00",
-          "dateModified": "2026-10-24T14:18:00+02:00",
+          "dateModified": "2026-10-30T00:38:00+01:00",
           "hasPart": [
             { "@id": "https://officialrickster.github.io/#navigation" },
             { "@id": "https://officialrickster.github.io/#faq" }
@@ -576,7 +577,7 @@
     </script>
 </head>
 <body>
-    <nav class="sidebar-nav">
+    <nav class="sidebar-nav" aria-label="Main Navigation">
         <ul>
             <li><a href="#about" title="About"><i class="fa-solid fa-user"></i><span class="nav-text">About</span></a></li>
             <li><a href="#projects" title="Projects"><i class="fa-solid fa-gamepad"></i><span class="nav-text">Projects</span></a></li>
@@ -630,13 +631,13 @@
             <section id="projects">
                 <div class="projects-header reveal">
                     <h2>Featured Projects</h2>
-                    <button class="mobile-filter-toggle"><i class="fa-solid fa-filter"></i>Filters</button>
-                    <div class="project-filters">
+                    <button type="button" class="mobile-filter-toggle" aria-expanded="false" aria-controls="project-filters" aria-label="Toggle project filters"><i class="fa-solid fa-filter" aria-hidden="true"></i>Filters</button>
+                    <div class="project-filters" id="project-filters">
                         <div class="filter-active-bg"></div>
-                        <button class="filter-btn active" data-filter="all">All</button>
-                        <button class="filter-btn" data-filter="Unreal">Unreal</button>
-                        <button class="filter-btn" data-filter="Unity">Unity</button>
-                        <button class="filter-btn" data-filter="RPG Maker">RPG Maker</button>
+                        <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+                        <button type="button" class="filter-btn" data-filter="Unreal" aria-pressed="false">Unreal</button>
+                        <button type="button" class="filter-btn" data-filter="Unity" aria-pressed="false">Unity</button>
+                        <button type="button" class="filter-btn" data-filter="RPG Maker" aria-pressed="false">RPG Maker</button>
                     </div>
                 </div>
                 <div class="projects-grid">
@@ -792,8 +793,8 @@
                     <a href="mailto:richi.segato@gmail.com" target="_blank" rel="noopener noreferrer" class="btn-primary" title="Send an Email to Riccardo Segato">
                         <i class="fa-solid fa-envelope"></i> Send an Email
                     </a>
-                    <button id="copyEmailBtn" class="btn-primary">
-                        <i class="fa-regular fa-copy"></i> Copy Address
+                    <button type="button" id="copyEmailBtn" class="btn-primary" aria-label="Copy email address to clipboard">
+                        <i class="fa-regular fa-copy" aria-hidden="true"></i> Copy Address
                     </button>
                 </div>
             </section>
@@ -810,7 +811,7 @@
             <p>&copy; <span id="current-year"></span> Riccardo Segato • <img src="Assets/AL-Logo.svg" alt="Art Lake Entertainment Logo" class="footer-studio-logo" width="18" height="18"> Art Lake Entertainment</p>
         </footer>
     </div>
-    <button id="scrollToTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
-    <script defer src="script.js?v=1.6"></script>
+    <button type="button" id="scrollToTopBtn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+    <script defer src="script.js?v=1.7"></script>
 </body>
 </html>
