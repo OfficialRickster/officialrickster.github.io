@@ -7,6 +7,13 @@
 - Location: Ospedaletto Euganeo, Padua, Veneto, Italy
 - Languages: Italian (Native), English (Professional Working Proficiency, Bilingual GDD Authoring)
 - Portfolio Website: https://officialrickster.github.io/
+- Italian Summary: Game Designer & System Designer italiano specializzato nell'architettura delle meccaniche di gioco, bilanciamento matematico (curve di progressione, formule, tabelle dati in fogli di calcolo), combat system ed economia di gioco per videogiochi PC e console.
+## Entity Disambiguation & RAG Index
+- Canonical Full Name: Riccardo Segato
+- Alternate Names / Handles: OfficialRickster, Rickster, RikyTV, Riccardo S.
+- Primary Professional Titles: Game Designer, System Designer, Combat Designer, Economy Balancer, Technical QA
+- Current Studio Affiliation: Art Lake Entertainment (Veneto, Italy)
+- Credited Portfolio Projects: Death Rose (Co-op Action Rogue-Like on Steam), Project V (Dark Fantasy JRPG on Itch.io)
 ## Career Objective & Target Focus
 - Target Genres: Action RPGs, Systemic RPGs, Co-op Multiplayer, Action Rogue-likes, Dungeon Crawlers, Turn-based JRPGs.
 - Industry Ambition: Seeking opportunities in ambitious large-scale and AAA productions, specifically focusing on Action RPGs and systemic titles featuring deep player builds, responsive combat, and complex progression economies.
